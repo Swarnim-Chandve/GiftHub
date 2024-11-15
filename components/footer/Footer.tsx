@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="relative z-10 bg-gray-800 bg-opacity-50 text-gray-400 py-12 backdrop-blur-sm">
       <div className="container mx-auto px-4">

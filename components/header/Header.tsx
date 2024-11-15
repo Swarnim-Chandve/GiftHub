@@ -1,13 +1,18 @@
-import React from 'react'
-import { Gift } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+"use client";
+
+import React from "react";
+import { Gift } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
   isWalletConnected: boolean;
   onConnectWallet: () => void;
 }
 
-export function Header({ isWalletConnected, onConnectWallet }: HeaderProps) {
+export default function Header({
+  isWalletConnected,
+  onConnectWallet,
+}: HeaderProps) {
   return (
     <header className="flex justify-between items-center mb-16 relative z-10">
       <div className="flex items-center space-x-2">
@@ -22,5 +27,5 @@ export function Header({ isWalletConnected, onConnectWallet }: HeaderProps) {
         {isWalletConnected ? "Wallet Connected" : "Connect Wallet"}
       </Button>
     </header>
-  )
+  );
 }

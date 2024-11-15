@@ -1,19 +1,18 @@
+"use client";
 
+import { FC } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Gift, Sparkles } from "lucide-react";
 
-
-import { FC } from 'react'
-import { motion } from 'framer-motion'
-import { ArrowRight, Gift, Sparkles } from 'lucide-react'
-
-export const Hero: FC = () => {
+const Hero: FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -22,9 +21,9 @@ export const Hero: FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -57,15 +56,19 @@ export const Hero: FC = () => {
         variants={itemVariants}
         className="text-xl mb-12 text-gray-400 max-w-2xl mx-auto"
       >
-        Experience the future of digital gifting. Secure, instant, and powered by Solana blockchain.
+        Experience the future of digital gifting. Secure, instant, and powered
+        by Solana blockchain.
       </motion.p>
 
-      <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+      <motion.div
+        variants={itemVariants}
+        className="flex flex-col sm:flex-row gap-4 justify-center"
+      >
         <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105">
           <span>Create Gift Card</span>
           <ArrowRight className="w-5 h-5" />
         </button>
-        
+
         <button className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105">
           <span>Learn More</span>
           <Sparkles className="w-5 h-5" />
@@ -74,3 +77,5 @@ export const Hero: FC = () => {
     </motion.section>
   );
 };
+
+export default Hero;

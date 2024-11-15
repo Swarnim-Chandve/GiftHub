@@ -29,6 +29,7 @@
 //   )
 // }
 
+"use client";
 
 
 import React from 'react'
@@ -64,7 +65,7 @@ const faqs = [
   }
 ]
 
-export function FAQ() {
+export default function FAQ() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

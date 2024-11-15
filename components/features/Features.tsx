@@ -26,27 +26,27 @@
 //   )
 // }
 
+"use client";
 
-
-import React from 'react';
-import { Shield, Zap, Wallet } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Shield, Zap, Wallet } from "lucide-react";
+import { motion } from "framer-motion";
 
 const features = [
   {
     icon: Shield,
     title: "Security First",
-    description: "Military-grade encryption with blockchain security"
+    description: "Military-grade encryption with blockchain security",
   },
   {
     icon: Zap,
     title: "Instant Delivery",
-    description: "Send gifts quickly and securely on Solana"
+    description: "Send gifts quickly and securely on Solana",
   },
   {
     icon: Wallet,
     title: "Full Control",
-    description: "Complete authority over your digital gifts"
+    description: "Complete authority over your digital gifts",
   },
 ];
 
@@ -55,9 +55,9 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
@@ -66,14 +66,14 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
-export function Features() {
+function Features() {
   return (
-    <section className="relative py-24" id='features'>
+    <section className="relative py-24" id="features">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
@@ -86,10 +86,7 @@ export function Features() {
         initial="hidden"
         animate="visible"
       >
-        <motion.div 
-          className="text-center mb-16"
-          variants={itemVariants}
-        >
+        <motion.div className="text-center mb-16" variants={itemVariants}>
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
             Powerful Features
           </h2>
@@ -97,8 +94,8 @@ export function Features() {
             Experience the future of digital gifting
           </p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
         >
@@ -117,9 +114,7 @@ export function Features() {
                   <h3 className="text-xl font-semibold mb-4 text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-400">{feature.description}</p>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 -z-10 blur-xl transition-all duration-300" />
               </motion.div>
