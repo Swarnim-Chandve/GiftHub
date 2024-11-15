@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import dynamic from "next/dynamic";
 import Footer from "@/components/footer/Footer";
-
 import "./globals.css";
-import WalletContextProvider from "@/components/WalletContextProvider";
 
 
 export const metadata: Metadata = {
@@ -12,7 +10,10 @@ export const metadata: Metadata = {
   description: "Create and send digital gift cards on Solana blockchain",
 };
 
-
+const WalletContextProvider = dynamic(
+    () =>
+      import("../components/WalletContextProvider").then((mod) => mod.default),
+  );
 
 const AppBar = dynamic(
   () => import("../components/AppBar").then((mod) => mod.AppBar),
