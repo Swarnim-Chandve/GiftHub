@@ -3,8 +3,14 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Gift, Sparkles } from "lucide-react";
+import Link from "next/link";
+
+
 
 const Hero: FC = () => {
+
+
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -35,6 +41,8 @@ const Hero: FC = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
+        
+            
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
       </div>
@@ -64,15 +72,16 @@ const Hero: FC = () => {
         variants={itemVariants}
         className="flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105">
+        <Link className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105" href="/create-gift">
+          
           <span>Create Gift Card</span>
           <ArrowRight className="w-5 h-5" />
-        </button>
+        </Link>
 
-        <button className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105">
+        <Link className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center space-x-2 text-white font-semibold transition-all hover:scale-105" href="/learn">
           <span>Learn More</span>
           <Sparkles className="w-5 h-5" />
-        </button>
+        </Link>
       </motion.div>
     </motion.section>
   );
