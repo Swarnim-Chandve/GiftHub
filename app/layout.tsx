@@ -6,8 +6,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Solana Gift Cards",
-  description: "Create and send digital gift cards on Solana blockchain",
+  title: "Gifting on Solana",
+  description: "Create and send digital gift on Solana blockchain",
 };
 
 const WalletContextProvider = dynamic(

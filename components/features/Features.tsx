@@ -1,30 +1,3 @@
-// import React from 'react'
-// import { Shield, Zap, Wallet } from 'lucide-react'
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
-// const features = [
-//   { icon: Shield, title: "Security First", description: "Military-grade encryption with blockchain security" },
-//   { icon: Zap, title: "Instant Delivery", description: "Send gifts quickly and securely on Solana" },
-//   { icon: Wallet, title: "Full Control", description: "Complete authority over your digital gifts" },
-// ]
-
-// export function Features() {
-//   return (
-//     <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 relative z-10">
-//       {features.map((feature, index) => (
-//         <Card key={index} className="bg-gray-800 bg-opacity-50 border-gray-700 backdrop-blur-sm">
-//           <CardHeader>
-//             <feature.icon className="h-12 w-12 mb-4 text-purple-500" />
-//             <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
-//           </CardHeader>
-//           <CardContent>
-//             <p className="text-gray-400">{feature.description}</p>
-//           </CardContent>
-//         </Card>
-//       ))}
-//     </section>
-//   )
-// }
 
 "use client";
 
